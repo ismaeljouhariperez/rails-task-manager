@@ -1,0 +1,28 @@
+<div class="container mt-5 mx-auto">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="task p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1><%= @task.title %></h1>
+          <%= link_to 'Edit this task', edit_task_path(@task), class: "btn btn-primary" %>
+        </div>
+        <h3>Task description</h3>
+        <p><%= @task.details %></p>
+        <% if !@task.completed %>
+        <label class="checkbox-container mt-4">
+          This task is not completed yet
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <% else %>
+        <label class="checkbox-container mt-4">
+          This task is completed
+          <input type="checkbox" checked>
+          <span class="checkmark"></span>
+        </label>
+      <% end %>
+      </div>
+
+      </div>
+    </div>
+    </div>
